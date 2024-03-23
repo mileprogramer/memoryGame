@@ -1,0 +1,108 @@
+#editor{
+    position: relative;
+}
+#edit_level{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#edit_level #form{
+    width: 100%;
+    margin-top: 40px;
+    border: 1px solid var(--blue);
+    gap: 20px;
+}
+#edit_level #form p{
+    text-align: start;
+    margin: 10px;
+}
+
+#edit_level .radio-btns{
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+}
+.form-together{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+}
+.form-together-child{
+    width: 100%;
+}
+.form-upload-part .add-text{
+    font-style: italic;
+}
+.form-upload .uploaded{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.form-upload-text{
+    margin: 20px 0px;
+}
+.form-upload .uploaded .uploaded-file .level-image{
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+}
+.form-upload .uploaded .uploaded-file{
+    position: relative;
+}
+.form-upload .uploaded .uploaded-file .image-checkbox{
+    display: none;
+}
+.open-image{
+    width: 100%;
+    height: 30px;
+    color: var(--black);
+}
+.change-image-btn{
+    display: none;
+}
+.change-image{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -5%;
+    left: 85%;
+}
+.change-image img{
+    width: 100%;
+    height: 100%;
+}
+#modal-image-change{
+    padding: 10px;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translateX(-50%);
+    background-color: var(--bgGray);
+}
+#modal-image-change img{
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+.parent-images{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.parent-images .new-image-div{
+    display: none;
+}
+#overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+}

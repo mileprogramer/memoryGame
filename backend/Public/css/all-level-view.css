@@ -1,0 +1,92 @@
+#editor .header{
+    display: flex;
+    border: 1px solid var(--black);
+}
+#editor .header .cell{
+    width: 110px;
+    border-right: 1px solid var(--black);
+}
+#editor .header .last-child{
+    border-right: none;
+}
+
+#editor .header p{
+    padding: 10px;
+}
+.header-images{
+    border-right: none;
+}
+.level{
+    display: flex;
+}
+.level .cell{
+    width: 110px;
+    padding: 10px;
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+.level .cell:first-child{
+    border-left: 1px solid var(--black);
+}
+.level .actions{
+    padding: 5px;
+    border-bottom: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions{
+    width: 100px;
+    margin: 0 0 auto auto;
+    border-left: 1px solid var(--black);
+}
+.actions .actions-btn{
+    width: 100%;
+    height: auto;
+}
+.actions p{
+    border-right: 0px solid var(--black);
+}
+.edit-btn{
+    display: block;
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    padding: 3px 0px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.remove-btn{
+    display: block;
+    background-color: var(--indiared);
+    color: var(--black);
+    border: none;
+    padding: 3px 0px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.level .images-container{
+    border-bottom: 1px solid var(--black);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.level .images-container img{
+    width: 70px;
+    height: auto;
+}
+.level .images-container a{
+    height: auto;
+}
+.level a{
+    color: black;
+}

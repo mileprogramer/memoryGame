@@ -1,0 +1,7 @@
+Hard coded Things
+
+Admin Dashboard 
+Slike koje se pojavljuje kada kliknem na edit level mora da se promeni hard koded link u fajlu views/level/editor/edit/levels.php
+
+Config fajl
+

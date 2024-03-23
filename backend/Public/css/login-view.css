@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    background-color: var(--bgGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password-container {
+
+    position: relative;
+
+}
+.display-password{
+
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+
+}
+.display-password.unactive{
+    display: none;
+}

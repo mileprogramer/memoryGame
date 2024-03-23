@@ -1,0 +1,32 @@
+.alert{
+    overflow-x: hidden;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    background-color: var(--lightgreen);
+    color: var(--darkgreen);
+    font-size: 18px;
+    z-index: 999;
+}
+.alert p{
+    padding: 30px 0px !important;
+}
+.alert-timer{
+    transition: 0.4s ease-in-out;
+    width: 0%;
+    height: 4px;
+    background-color: var(--yellow);
+}
+.alert button{
+    width: 200px;
+    padding: 10px 1px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    cursor: pointer;
+}

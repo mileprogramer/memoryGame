@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url(fonts.css);
+
+h1, h2, h3, p, span{
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.level{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+}
+.point{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.line{
+    width: 200px;
+    height: 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-left: -10px;
+}
+.line-win{
+    transition: 0.4s ease-in-out;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+}
+.level-text{
+    position: absolute;
+    top: -90%;
+    left: 0%;
+}
+
+#overlay{
+    z-index: 9999;
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0a3c2f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-game{
+    position: relative;
+    background-color: #0d614b;
+    color: white;
+    padding: 30px 20px;
+}
+
+#container-game .container{
+    display: grid;
+    gap: 5px;
+}
+
+#container-game .noti{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#container-game button{
+
+    border: none;
+    padding: 10px 20px;
+    background-color: #0a3c2f;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+
+}
+#container-game button:hover{
+    background-color: white;
+    color: #0a3c2f;
+
+}
+.btnReveal{
+
+    background-color: white !important;
+    color: #0a3c2f !important;
+}
+
+.btnReveal:hover{
+
+    background-color: #0a3c2f !important;
+    color: white !important;
+
+}
+
+.card{
+    position: relative;
+    border: #eee;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+.card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #209d7b;
+    backface-visibility: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    
+    transform: perspective(900px) rotateY(-180deg);
+    backface-visibility: hidden;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    transition: 0.7s ease-in-out;
+}
+.card-back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.active .card-front{
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.card.active .card-back{
+    transform: perspective(900px) rotateY(0deg);
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.time-rest{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#timer{
+    width: 20px;
+    height: 100%;
+    border: 1px solid #eee;
+
+    position: absolute;
+    top: 0%;
+    left: 120%;
+    padding: 2px;
+    transition: all 0.4s ease-in-out;
+}
+
+#timer div{
+    width: 100%;
+    height: 0%;
+    background-color: white;
+}
+
+#modal{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn-green{
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #209d7b;
+    border: none;
+    border-radius: 4px;
+}
+
+#overlay.active-overlay {
+    display: flex; 
+    animation: showOverlay 0.9s ease-in-out forwards; /* forwards zadržava završno stanje */
+}
+
+@keyframes showOverlay {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+

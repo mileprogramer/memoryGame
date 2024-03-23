@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="level">
+            <div class="point active"></div>
+            <div class="line">
+                <div class="line-win"></div>
+            </div>
+            <p class="level-text">Level 1</p>
+        </div>
+        <div class="level">
+            <div class="point"></div>
+            <div class="line">
+                <div class="line-win"></div>
+            </div>
+            <p class="level-text">Level 2</p>
+        </div>
+        <div class="level">
+            <div class="point"></div>
+            <div class="line">
+                <div class="line-win"></div>
+            </div>
+            <p class="level-text">Level 3</p>
+        </div>
+        <div class="level">
+            <div class="point"></div>
+            <div class="line">
+                <div class="line-win"></div>
+            </div>
+            <p class="level-text">Level 4</p>
+        </div>
+        <div class="level">
+            <div class="point"></div>
+            <div class="line">
+                <div class="line-win"></div>
+            </div>
+            <p class="level-text">Level 5</p>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div id="container-game">
+        </div>
+    </div>
+    
+    <script src="js/API.js"></script>
+    <script src="js/Card.js"></script>
+    <script src="js/Grid.js"></script>
+    <script src="js/Timer.js"></script>
+    <script src="js/Level.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

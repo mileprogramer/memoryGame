@@ -1,0 +1,15 @@
+/*CSS variables*/
+:root{
+    --blue: #2271b1;
+    --blue-lighter:rgba(34, 113, 177, 0.187);
+    --black: #343541;
+    --white: #fff;
+    --dark-hover: #555;
+    --bgGray: lightgray;
+    --indiared: red;
+    --yellow: #ffc107;
+    --dark-white: #fbfbfb;
+    --overlay: #33333361;
+    --lightgreen: #d4edda;
+    --darkgreen: #155724;
+}  

@@ -1,0 +1,41 @@
+#add_level{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#add_level #form{
+    width: 100% !important;
+    margin-top: 40px;
+    border: 1px solid var(--blue);
+    gap: 20px;
+}
+#add_level #form p{
+    text-align: start;
+    margin: 10px;
+}
+
+#add_level .radio-btns{
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--black);
+    border-radius: 20px;
+}
+
+.form-together{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+}
+.form-together-child{
+    width: 100%;
+}
+.form-upload-part .add-text{
+    font-style: italic;
+}
+.form-upload-part{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    justify-content: center;
+}

@@ -1,0 +1,68 @@
+#form{
+    text-align: center;
+    width: 340px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+#form input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+}
+#form input:focus{
+    background-color: var(--blue-lighter);
+}
+#form button{
+    width: 100%;
+    padding: 10px 1px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+#form button:hover{
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+#form #lost_password{
+    margin: 10px;
+}
+#form #lost_password a{
+    padding: 20px;
+    color: var(--blue);
+}
+#form #mistakes{
+    color: var(--indiared);
+    padding: 20px;
+}
+#form #mistakes:empty{
+    display: none;
+}
+#form #mistakes p{
+    margin: 0px;
+    color: var(--indiared);
+}
+
+.mistake{
+    transition: 1s ease-in-out;
+    border: 1px solid var(--indiared);
+    animation: mistake-animation 1s;
+}
+@keyframes  mistake-animation{
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1.0);
+
+    }
+}

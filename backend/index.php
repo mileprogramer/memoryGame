@@ -8,8 +8,6 @@ require_once "./config/config.php";
 
 $router = new Route();
 
-$start_point = "/".root_folder;
-
 $router->get("/", "admin_dashboard/controllers/is_logged.php");
 $router->get("/login", "admin_dashboard/controllers/login.php");
 $router->get("/logout", "admin_dashboard/controllers/login.php");

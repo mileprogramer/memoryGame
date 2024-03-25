@@ -34,8 +34,8 @@ class Add_Level extends Level_Service{
         }
         else{
             is_set_session()? false : session_start();
-            $_SESSION["msg"] = "Successfully added new level";
-            header("Location: ../controllers/admin.php?success=true");
+            $_SESSION["msg"] = "Successfully added new level!!! <button><a href= 'edit_level?id_level={$this->level_data["id"]}'>View level</a></button>";
+            header("Location: /memoryGame/backend?view=success");
         }
     
     }

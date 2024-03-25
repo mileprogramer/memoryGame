@@ -6,27 +6,14 @@ class Level{
         let gridPhotos = null;
         containerGame.innerHTML = "";
 
-        API.getDataGrid(this.level)
-            .then((data) =>{
-                gridData = data;
-                let numPictures = (gridData.grid[0] * gridData.grid[1])/2;
-
-                API.getPhotos(numPictures)
-                    .then((data) =>{
-                        gridPhotos = data.photos;
-                        this.setInfoData(gridData, this.containerGame);
-
-                        // initial delay to add effect
-                        setTimeout(()=>{
-                            let newLevel = new Grid(gridData, gridPhotos, this.containerGame);
-                            let newTimer = new Timer(gridData.time, this.containerGame);
-                        }, 700)
-
-                    })
-            })
     }
 
-    setInfoData(data, containerGame){
+    getData() {
+        
+        return API.getData(this.level);
+    }
+
+    setInfoData(data){
 
         let infoDiv = document.createElement("div");
         let nameLevel = document.createElement("h1");
@@ -36,9 +23,9 @@ class Level{
         let allTime = document.createElement("h5");
         
         infoDiv.classList.add("info")
-        nameLevel.textContent = `Level ${data.nameLvl}`;
+        nameLevel.textContent = `Level ${this.level}`;
         h4.textContent = "Time:";
-        allTime.textContent = `/${data.time}`;
+        allTime.textContent = `/${data.time_to_solve}${data.unit}`;
         currentTime.classList.add("current-time");
 
         timeRest.classList.add("time-rest");
@@ -47,11 +34,7 @@ class Level{
         timeRest.append(allTime);
         infoDiv.append(nameLevel);
         infoDiv.append(timeRest);
-        containerGame.append(infoDiv);
+        this.containerGame.append(infoDiv);
     }
 
 }
-/* Pexels */
-/* MY API KEY erOnLPPGMk1LM7tryk9j4nHyBp3pO6YMGfjqDdiEVntNBplV8zPpFLv3 */
-
-

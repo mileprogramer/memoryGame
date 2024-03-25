@@ -15,20 +15,16 @@ class Timer{
     }
 
     startTimer(time){
-        /* time is string for example time = "120s" */
-        time = time.substring(0, time.length-1);
-        Timer.objTime.time = parseInt(time);
-        
         // creating html and adding into container-game
         let timerDiv = document.createElement("div");
         this.addHTML(timerDiv);
 
         /* Calculating divHeight to get with what value i have to increase height of div(that represent time left to solve game) */
         let timerDivHeight = +getComputedStyle(timerDiv).height.substring(0, getComputedStyle(timerDiv).height.length-2) - +getComputedStyle(timerDiv).paddingBottom.substring(0, getComputedStyle(timerDiv).paddingBottom.length-2);
-        Timer.objTime.diff = timerDivHeight / time;
+        Timer.objTime.diff = timerDivHeight / (time / 1000);
         Timer.objTime.increment = 0;
         Timer.loop = setInterval(this.loopFunc, 1000);
-
+        Timer.objTime.time = time / 1000;
     }
 
     addHTML(timerDiv){
@@ -47,7 +43,7 @@ class Timer{
         Timer.objTime.infoRestTime.textContent = Timer.objTime.time+"s";
 
         if(Timer.objTime.time === 0){
-
+            console.log("Timer call END GAME")
             Timer.objTime.timeHeigth.style.height = "100%";
             Game.endGame("lose");
         };

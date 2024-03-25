@@ -4,7 +4,7 @@
         <p>Fill the form to add new Level</p>
     </div>
     <section id="add_level">
-        <form action="/memoryGame/backend/edit_level" id="form" method="POST" enctype="multipart/form-data">
+        <form action="/memoryGame/backend/add_level" id="form" method="POST" enctype="multipart/form-data">
 
             <div class="form-together">
                 <div class="form-together-child">

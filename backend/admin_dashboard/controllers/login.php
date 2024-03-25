@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $login = new Login($user_data);
 
     if ($login->try_login()) {
-        header("Location: ../controllers/admin.php");
+        header("Location: ./");
         exit();
 
     }

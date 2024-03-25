@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 
     if(is_array_empty($_POST)){
-        header("Location: admin.php?view=add_level");
+        header("Location: ./add_level");
         die();
     }
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     require_once "classes/Connection.php";
     require_once "classes/Query_Builder.php";
     require_once "classes/Level_Service.php";
-    require_once "../models/Add_Level.php";
+    require_once "admin_dashboard/models/Add_Level.php";
 
     $extesions = ["png", "jpeg", "jpg", "webp", "avif"];
     $add_level = new Add_Level($user_input);

@@ -32,7 +32,11 @@
                             <input type="radio" name ="unit" value = "minutes" <?php echo ($level->unit === 'minutes') ? 'checked' : ''; ?>>
                         </div>
                     </div>
+                </div>
 
+                <div class="form-together-child">
+                    <p>Type the value for card size</p>
+                    <input type="number" name="card_size" placeholder="Value for card" required value= "<?php echo(substr($level->card_size, 0, strlen($level->card_size)-2))?>">
                 </div>
             </div>
 

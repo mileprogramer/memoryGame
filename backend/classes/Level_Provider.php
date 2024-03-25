@@ -45,6 +45,7 @@ class Level_Provider extends Connection{
                 $one_object->num_columns = $data[$i]->num_columns;
                 $one_object->time_to_solve = $data[$i]->time_to_solve;
                 $one_object->unit = $data[$i]->unit;
+                $one_object->card_size = $data[$i]->card_size;
                 $one_object->images = [
                     ["id_image"=>$data[$i]->id_image,
                     "image_path"=>$data[$i]->image_path]

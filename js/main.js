@@ -8,7 +8,7 @@ let overlay = document.getElementById("overlay");
 let durationFlipCard = 700;
 overlay.classList.add("active-overlay")
 
-let level = 2;
+let level = 4;
 
 Game.startGame(level, containerGame, durationFlipCard);
 
